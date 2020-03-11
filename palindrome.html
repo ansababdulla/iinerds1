@@ -1,0 +1,42 @@
+<html>
+<head>
+    <script src="Script2.js"></script>
+</head>
+<body>
+    <script>
+        function myFunction()
+        {
+            var x = parseInt(document.getElementById("nmbr").value);
+            var rev = 0;
+            let temp = x;
+            while (x > 0)
+            {
+
+                console.log('x',x)
+                
+                var y = x % 10;
+                console.log('log', y);
+                rev = rev * 10 + y;
+                x =x/ 10;
+                x = parseInt(x,10);
+            }
+            console.log('rev', rev)
+            if (temp == rev) {
+                document.getElementById("para").innerHTML = "palindrome";
+
+            }
+            else {
+                document.getElementById("para").innerHTML = "not a palindrome";
+
+            }
+           
+        }
+
+
+    </script>
+    <p id="para">enter your number</p>
+    <input type="text" id="nmbr" />
+    <button type="button" onclick=myFunction()>Try it</button>
+
+</body>
+</html>
